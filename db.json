@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "firstName": "Hoàng test",
+      "lastName": "Anh1",
+      "age": 23
+    },
+    {
+      "id": 2,
+      "firstName": "Hoàng test 2",
+      "lastName": "Anh2",
+      "age": 23
+    },
+    {
+      "id": 3,
+      "firstName": "Hoàng",
+      "lastName": "Anh 3",
+      "age": 23
+    },
+    {
+      "id": 4,
+      "firstName": "Hoang Anh",
+      "lastName": "test ",
+      "age": 223
+    }
+  ]
+}
