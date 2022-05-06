@@ -6,6 +6,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { registerLocaleData } from '@angular/common';
 
 import { environment } from '@env/environment';
 import { RouteReusableStrategy, ApiPrefixInterceptor, ErrorHandlerInterceptor, SharedModule } from '@shared';
@@ -19,7 +20,16 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { ApiService } from './core/api.service';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
+import { zh_CN } from 'ng-zorro-antd/i18n';
+import en from '@angular/common/locales/en';
 
+registerLocaleData(en);
 @NgModule({
   imports: [
     BrowserModule,
@@ -35,6 +45,11 @@ import { ApiService } from './core/api.service';
     AboutModule,
     AuthModule,
     ReactiveFormsModule,
+    NzLayoutModule,
+    NzIconModule,
+    DemoNgZorroAntdModule,
+    BrowserAnimationsModule,
+    NzBadgeModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent, AddUserComponent, EditUserComponent, ListUserComponent],
@@ -54,6 +69,7 @@ import { ApiService } from './core/api.service';
       provide: RouteReuseStrategy,
       useClass: RouteReusableStrategy,
     },
+    { provide: NZ_I18N, useValue: en_US },
   ],
   bootstrap: [AppComponent],
 })

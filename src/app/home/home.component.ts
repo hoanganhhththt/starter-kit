@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 
 import { QuoteService } from './quote.service';
+import { getISOWeek } from 'date-fns';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +13,17 @@ import { QuoteService } from './quote.service';
 export class HomeComponent implements OnInit {
   quote: string | undefined;
   isLoading = false;
+  date = null;
+  rangeDate = null;
+  data = [
+    'Racing car sprays burning fuel into crowd.',
+    'Japanese princess to wed commoner.',
+    'Australian walks 100km after outback crash.',
+    'Man charged over missing wedding girl.',
+    'Los Angeles battles huge wildfires.',
+  ];
 
-  constructor(private quoteService: QuoteService) {}
+  constructor(private quoteService: QuoteService, public msg: NzMessageService) {}
 
   ngOnInit() {
     this.isLoading = true;
@@ -26,5 +37,8 @@ export class HomeComponent implements OnInit {
       .subscribe((quote: string) => {
         this.quote = quote;
       });
+  }
+  onChange(result: Date): void {
+    console.log('onChange: ', result);
   }
 }

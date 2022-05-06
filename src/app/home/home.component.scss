@@ -1,9 +1,89 @@
-.logo {
-  width: 100px;
+.borderRight {
+  border-right: 1px solid gray;
 }
-
-q {
-  font-style: italic;
-  font-size: 1.2rem;
-  quotes: "« " " »";
+p {
+  color: #05a5f5;
+  font-size: 12px;
 }
+h6 {
+  padding-right: 10%;
+}
+h1 {
+  margin: 0;
+}
+.homeAction {
+  height: 200px;
+  display: flex;
+  margin-top: 10px;
+}
+.colorGray {
+  color: gray;
+}
+.flex-end {
+  align-items: flex-end;
+}
+.flex-start {
+  align-items: flex-start;
+}
+.square {
+  height: 50%;
+  margin: 0 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.actionJoin {
+  background-color: #197de0;
+}
+.actionCreate {
+  background-color: #05ebb1;
+}
+.actionMetting {
+  background-color: #e08210;
+}
+.actionShare {
+  background-color: #9d18db;
+}
+.notiContent {
+  display: flex;
+  align-items: center;
+}
+.mg0 {
+  margin: 0;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.fs15 {
+  font-size: 15px;
+}
+.colorBlue {
+  color: #05a5f5;
+}
+.colorBlack {
+  color: black;
+}
+nz-date-picker {
+  box-shadow: none !important;
+  border: 1px solid #fafafa;
+}
+.selector.noshadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+nz-select {
+  width: 92%;
+}
+.width92 {
+  width: 97.3%;
+}
+// :host ::ng-deep .ant-tabs-tabpane {
+//   padding: 24px;
+//   overflow: auto;
+// }
