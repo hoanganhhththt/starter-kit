@@ -198,6 +198,9 @@ const log = new Logger('App');
       }
       .buttonMenu {
         margin-left: 2%;
+        /* line-height: 15px; */
+        display: flex;
+        align-items: center;
       }
       .menuBagde {
         width: 25%;
@@ -209,6 +212,8 @@ const log = new Logger('App');
       }
       nz-header div div button {
         margin-left: 10px;
+        display: flex;
+        align-items: center;
       }
     `,
   ],

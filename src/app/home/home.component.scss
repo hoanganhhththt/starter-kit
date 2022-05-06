@@ -1,5 +1,5 @@
 .borderRight {
-  border-right: 1px solid gray;
+  border-right: 1px solid red;
 }
 p {
   color: #05a5f5;
@@ -24,6 +24,9 @@ h1 {
 }
 .flex-start {
   align-items: flex-start;
+}
+.right0 {
+  right: 0;
 }
 .square {
   height: 50%;
@@ -59,6 +62,9 @@ h1 {
 .ml10 {
   margin-left: 10px;
 }
+.ml5 {
+  margin-left: 5px;
+}
 .fs15 {
   font-size: 15px;
 }
@@ -78,10 +84,19 @@ nz-date-picker {
   box-shadow: none;
 }
 nz-select {
-  width: 92%;
+  width: 100%;
 }
-.width92 {
-  width: 97.3%;
+.width100 {
+  width: 100%;
+}
+.menuSearch {
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  /* vertical-align: middle; */
+}
+.lineCenter {
+  display: flex;
+  align-items: center;
 }
 // :host ::ng-deep .ant-tabs-tabpane {
 //   padding: 24px;

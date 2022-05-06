@@ -26,7 +26,7 @@
         <br />
         <br />
         <div class="notiContent">
-          <button nz-button nzType="default" nzDanger nzShape="circle">
+          <button nz-button nzType="default" nzDanger nzShape="circle" class="lineCenter">
             <i nz-icon nzType="bell" nzTheme="outline" class="itemBagde"></i>
           </button>
           <div class="ml10">
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="notiContent">
-          <button nz-button nzType="default" nzShape="circle">
+          <button nz-button nzType="default" nzShape="circle" class="lineCenter">
             <i nz-icon nzType="bell" nzTheme="outline" class="itemBagde"></i>
           </button>
           <div class="ml10">
@@ -43,13 +43,13 @@
           </div>
         </div>
       </div>
-      <div nz-col [nzSpan]="12">
+      <div nz-col [nzSpan]="12" class="flex-end">
         <nz-date-picker
           nzInline
           [(ngModel)]="date"
           [nzBackdrop]="true"
           (ngModelChange)="onChange($event)"
-          class="selector noshadow"
+          class="selector noshadow right0"
         ></nz-date-picker>
       </div>
     </div>
@@ -72,7 +72,7 @@
         </nz-select>
       </div>
       <div nz-col [nzSpan]="24">
-        <ul nz-list [nzDataSource]="data" nzBordered nzSize="large" class="width92">
+        <ul nz-list [nzDataSource]="data" nzSize="large" class="width100">
           <li nz-list-item *ngFor="let item of data">
             <nz-list-item-meta nzDescription="Họp chốt giao diện">
               <nz-list-item-meta-title>
@@ -83,7 +83,7 @@
               <nz-list-item-action>
                 <div class="notiContent">
                   <i nz-icon nzType="calendar" nzTheme="outline"></i>
-                  <span>06/12/2000</span>
+                  <span class="ml5">06/12/2000</span>
                 </div>
               </nz-list-item-action>
             </ul>
