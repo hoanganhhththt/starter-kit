@@ -28,6 +28,8 @@ import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
 import { zh_CN } from 'ng-zorro-antd/i18n';
 import en from '@angular/common/locales/en';
+import { TestTable } from './test-table/test-table.component';
+import { TestSearch } from './test-search/test-table.component';
 
 registerLocaleData(en);
 @NgModule({
@@ -52,7 +54,7 @@ registerLocaleData(en);
     NzBadgeModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
-  declarations: [AppComponent, AddUserComponent, EditUserComponent, ListUserComponent],
+  declarations: [AppComponent, AddUserComponent, EditUserComponent, ListUserComponent, TestTable, TestSearch],
   providers: [
     ApiService,
     {

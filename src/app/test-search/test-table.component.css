@@ -1,0 +1,20 @@
+.send-request {
+  margin-bottom: 16px;
+}
+
+.send-request span {
+  margin-left: 8px;
+}
+nz-select {
+  width: 100%;
+}
+p {
+  margin-top: 10px;
+}
+#iconDownload {
+  display: flex;
+  line-height: center;
+}
+::ng-deep .ant-form-item-label {
+  text-align: left !important;
+}

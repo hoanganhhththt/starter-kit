@@ -40,8 +40,8 @@ const log = new Logger('App');
           </li>
           <li nz-submenu nzTitle="Team" nzIcon="team">
             <ul>
-              <li nz-menu-item>Team 1</li>
-              <li nz-menu-item>Team 2</li>
+              <li nz-menu-item (click)="gotoTable()">Team 1</li>
+              <li nz-menu-item (click)="gotoSearch()">Team 2</li>
             </ul>
           </li>
           <li nz-menu-item>
@@ -58,7 +58,15 @@ const log = new Logger('App');
             </div>
             <!-- <div class="logoMobi"></div> -->
             <ul nz-menu nzMode="horizontal" class="header-menu" id="ul-header">
-              <li nz-menu-item><i nz-icon nzType="setting" nzTheme="outline"></i><span>Quản lí</span></li>
+              <li nz-submenu nzTitle="Quản lí" nzIcon="setting" class="alignCenter">
+                <ul>
+                  <li nz-menu-item>Phòng họp</li>
+                  <li nz-menu-item>Quản lí 2</li>
+                </ul>
+              </li>
+              <!-- <li nz-menu-item>
+                <i nz-icon nzType="setting" nzTheme="outline"></i>
+                <span>Quản lí</span></li> -->
               <li nz-menu-item>
                 <i nz-icon nzType="fund-projection-screen" nzTheme="outline"></i><span>Báo cáo</span>
               </li>
@@ -202,6 +210,10 @@ const log = new Logger('App');
         display: flex;
         align-items: center;
       }
+      .alignCenter {
+        display: flex;
+        align-items: center;
+      }
       .menuBagde {
         width: 25%;
         height: 64px;
@@ -273,5 +285,12 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   gotoHome(): void {
     this.router.navigate(['home']);
+  }
+  gotoTable(): void {
+    console.log('haha');
+    this.router.navigate(['table']);
+  }
+  gotoSearch(): void {
+    this.router.navigate(['search']);
   }
 }

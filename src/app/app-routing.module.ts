@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddUserComponent } from './add-user/add-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { TestTable } from './test-table/test-table.component';
+import { TestSearch } from './test-search/test-table.component';
 
 const routes: Routes = [
   // Fallback when no prior route is matched
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: 'add-user', component: AddUserComponent },
   { path: 'list-user', component: ListUserComponent },
   { path: 'edit-user', component: EditUserComponent },
+  { path: 'table', component: TestTable },
+  { path: 'search', component: TestSearch },
 ];
 
 @NgModule({

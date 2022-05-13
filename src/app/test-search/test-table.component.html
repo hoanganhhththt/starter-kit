@@ -1,0 +1,101 @@
+<nz-collapse>
+  <nz-collapse-panel
+    *ngFor="let panel of panels"
+    [nzHeader]="panel.name"
+    [nzActive]="panel.active"
+    [nzDisabled]="panel.disabled"
+  >
+    <form nz-form [formGroup]="validateForm">
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-label [nzSpan]="10">File danh sách</nz-form-label>
+            <nz-form-control [nzSpan]="14">
+              <input nz-input placeholder="Enter name" formControlName="listFile" id="listFile" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-label [nzSpan]="10">Loại cắt hủy</nz-form-label>
+            <nz-form-control [nzSpan]="14">
+              <nz-select id="cancelType" formControlName="cancelType" nzPlaceHolder="Enter name">
+                <nz-option nzValue="1" nzLabel="Michigan"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-label [nzSpan]="10">File ISDN</nz-form-label>
+            <nz-form-control [nzSpan]="14">
+              <input nz-input placeholder="Enter name" formControlName="isdnFile" id="isdnFile" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-label [nzSpan]="10">Thời gian cắt</nz-form-label>
+            <nz-form-control [nzSpan]="14">
+              <input nz-input placeholder="Choose period" formControlName="cancelTime" id="cancelTime" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-label [nzSpan]="10">File danh sách hoàn tất</nz-form-label>
+            <nz-form-control [nzSpan]="14">
+              <input nz-input placeholder="Enter name" formControlName="successFile" id="successFile" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-label [nzSpan]="10">Cửa hàng</nz-form-label>
+            <nz-form-control [nzSpan]="14">
+              <input nz-input placeholder="Enter name" formControlName="shop" id="shop" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-control>
+              <label nz-checkbox formControlName="cancelFalse" id="cancelFalse">Cắt hủy lô sai</label>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-control>
+              <label nz-checkbox formControlName="cancelKK" id="cancelKK">Loại bỏ số KK</label>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-control>
+              <label nz-checkbox formControlName="cancelUAC" id="cancelUAC">Cắt khỏi UAC</label>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="24" [nzMd]="12" [nzLg]="8" [nzXl]="8" [nzXXl]="8">
+          <nz-form-item>
+            <nz-form-control>
+              <nz-upload
+                nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                nzAccept=".txt"
+                [nzHeaders]="{ authorization: 'authorization-text' }"
+                (nzChange)="handleChange($event)"
+              >
+                <button nz-button id="iconDownload">
+                  <i nz-icon nzType="upload"></i>
+                  Tải dữ liệu
+                </button>
+              </nz-upload>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+    </form>
+  </nz-collapse-panel>
+</nz-collapse>
