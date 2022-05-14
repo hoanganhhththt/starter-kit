@@ -18,3 +18,43 @@ p {
 ::ng-deep .ant-form-item-label {
   text-align: left !important;
 }
+.titleTable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#title {
+  width: 249px;
+  height: 20px;
+
+  /* Semibold / 14 | 20 */
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+}
+.search-box {
+  padding: 8px;
+}
+
+.search-box input {
+  width: 168px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.search-box button {
+  width: 80px;
+}
+
+.search-button {
+  margin-right: 8px;
+}

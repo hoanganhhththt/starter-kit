@@ -99,3 +99,65 @@
     </form>
   </nz-collapse-panel>
 </nz-collapse>
+<div class="titleTable">
+  <p><b>Danh sách thuê bao tạm cắt quá hạn</b></p>
+  <button nz-button nzType="primary">Xuất báo cáo</button>
+</div>
+<nz-table
+  #rowSelectionTable
+  nzShowPagination
+  nzShowSizeChanger
+  [nzData]="listOfDisplayData"
+  [nzScroll]="{ x: '1800' }"
+  (nzCurrentPageDataChange)="onCurrentPageDataChange($event)"
+>
+  <thead>
+    <tr>
+      <th
+        [nzChecked]="checked"
+        nzWidth="50px"
+        [nzIndeterminate]="indeterminate"
+        (nzCheckedChange)="onAllChecked($event)"
+      ></th>
+      <th [nzAlign]="'center'">
+        Acct_ID
+        <input nz-input placeholder="Search" />
+      </th>
+      <th [nzAlign]="'center'">
+        Status
+        <input nz-input placeholder="Search" (input)="searchStatus($event)" />
+      </th>
+      <th [nzAlign]="'center'">
+        Số thuê bao
+        <input nz-input placeholder="Search" />
+      </th>
+      <th [nzAlign]="'center'">Tên thuê bao<input nz-input placeholder="Search" /></th>
+      <th [nzAlign]="'center'">HTTT hiện tại<input nz-input placeholder="Search" /></th>
+      <th [nzAlign]="'center'">Số TK<input nz-input placeholder="Search" /></th>
+      <th [nzAlign]="'center'">Tên TK<input nz-input placeholder="Search" /></th>
+      <th [nzAlign]="'center'">Mã NH<input nz-input placeholder="Search" /></th>
+      <th [nzAlign]="'center'">Chi tiết lỗi<input nz-input placeholder="Search" /></th>
+      <th [nzAlign]="'center'">Lý do<input nz-input placeholder="Search" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of rowSelectionTable.data">
+      <td
+        [nzChecked]="setOfCheckedId.has(data.id)"
+        [nzDisabled]="data.disabled"
+        [nzShowCheckbox]="!data.disabled"
+        (nzCheckedChange)="onItemChecked(data.id, $event)"
+      ></td>
+      <td [nzAlign]="'center'">{{ data.id }}</td>
+      <td [nzAlign]="'center'">{{ data.status }}</td>
+      <td [nzAlign]="'center'">{{ data.phoneNumber }}</td>
+      <td [nzAlign]="'center'">{{ data.name }}</td>
+      <td [nzAlign]="'center'">{{ data.typeNow }}</td>
+      <td [nzAlign]="'center'">{{ data.accountNumber }}</td>
+      <td [nzAlign]="'center'">{{ data.accountName }}</td>
+      <td [nzAlign]="'center'">{{ data.bank }}</td>
+      <td [nzAlign]="'center'">{{ data.errorDetail }}</td>
+      <td [nzAlign]="'center'">{{ data.description }}</td>
+    </tr>
+  </tbody>
+</nz-table>
